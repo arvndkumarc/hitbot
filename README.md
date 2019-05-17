@@ -1,4 +1,4 @@
-# core-bot
+# Demo-bot
 Demonstrate the core capabilities of the Microsoft Bot Framework
 
 This bot has been created using [Bot Framework][1].
@@ -40,35 +40,3 @@ This samples shows how to:
 
 # Deploy the bot to Azure
 After creating the bot and testing it locally, you can deploy it to Azure to make it accessible from anywhere.
-To learn how, see [Deploy your bot to Azure][40] for a complete set of deployment instructions.
-
-
-# Further reading
-- [Bot Framework Documentation][20]
-- [Bot Basics][32]
-- [Azure Bot Service Introduction][21]
-- [Azure Bot Service Documentation][22]
-- [Deploying Your Bot to Azure][40]
-- [Azure CLI][7]
-- [msbot CLI][9]
-- [Azure Portal][10]
-- [Language Understanding using LUIS][11]
-- [Restify][30]
-- [dotenv][31]
-
-[1]: https://dev.botframework.com
-[4]: https://nodejs.org
-[5]: https://github.com/microsoft/botframework-emulator
-[6]: https://github.com/Microsoft/BotFramework-Emulator/releases
-[7]: https://docs.microsoft.com/cli/azure/?view=azure-cli-latest
-[8]: https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest
-[9]: https://github.com/Microsoft/botbuilder-tools/tree/master/packages/MSBot
-[10]: https://portal.azure.com
-[11]: https://www.luis.ai
-[20]: https://docs.botframework.com
-[21]: https://docs.microsoft.com/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0
-[22]: https://docs.microsoft.com/azure/bot-service/?view=azure-bot-service-4.0
-[30]: https://www.npmjs.com/package/restify
-[31]: https://www.npmjs.com/package/dotenv
-[32]: https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0
-[40]: https://aka.ms/azuredeployment
