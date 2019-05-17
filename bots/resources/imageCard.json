@@ -1,0 +1,20 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "scope": "Tourist_guide",
+    "cardType":"imageCard",
+    "body": [{
+        "type": "Image",
+        "url": "file:///C:/Users/nikhil.pal/ChatBot/luis-nodejs-bot-otsichatbot/bots/images/cat.jpg",
+        "selectAction": {
+            "type": "Action.OpenUrl",
+            "title": "cool link",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+    }, {
+        "type": "TextBlock",
+        "text": "Click the cat!"
+    }],
+    "speak":"hi this image card exmple"
+}

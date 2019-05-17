@@ -1,0 +1,1834 @@
+{
+  "luis_schema_version": "3.2.0",
+  "versionId": "0.1",
+  "name": "luis-nodejs-bot-otsichatbot-8a29",
+  "desc": "A LUIS model that uses intent and entities.",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "MovieTickets.Book",
+      "inherits": {
+        "domain_name": "MovieTickets",
+        "model_name": "Book"
+      }
+    },
+    {
+      "name": "MovieTickets.GetShowTime",
+      "inherits": {
+        "domain_name": "MovieTickets",
+        "model_name": "GetShowTime"
+      }
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "RestaurantReservation.Reserve",
+      "inherits": {
+        "domain_name": "RestaurantReservation",
+        "model_name": "Reserve"
+      }
+    }
+  ],
+  "entities": [
+    {
+      "name": "MovieTickets.Address",
+      "inherits": {
+        "domain_name": "MovieTickets",
+        "model_name": "Address"
+      },
+      "roles": []
+    },
+    {
+      "name": "MovieTickets.MovieTitle",
+      "inherits": {
+        "domain_name": "MovieTickets",
+        "model_name": "MovieTitle"
+      },
+      "roles": []
+    },
+    {
+      "name": "MovieTickets.PlaceName",
+      "inherits": {
+        "domain_name": "MovieTickets",
+        "model_name": "PlaceName"
+      },
+      "roles": []
+    },
+    {
+      "name": "MovieTickets.PlaceType",
+      "inherits": {
+        "domain_name": "MovieTickets",
+        "model_name": "PlaceType"
+      },
+      "roles": []
+    },
+    {
+      "name": "RestaurantReservation.Address",
+      "inherits": {
+        "domain_name": "RestaurantReservation",
+        "model_name": "Address"
+      },
+      "roles": []
+    },
+    {
+      "name": "RestaurantReservation.Amenities",
+      "inherits": {
+        "domain_name": "RestaurantReservation",
+        "model_name": "Amenities"
+      },
+      "roles": []
+    },
+    {
+      "name": "RestaurantReservation.AppName",
+      "inherits": {
+        "domain_name": "RestaurantReservation",
+        "model_name": "AppName"
+      },
+      "roles": []
+    },
+    {
+      "name": "RestaurantReservation.Atmosphere",
+      "inherits": {
+        "domain_name": "RestaurantReservation",
+        "model_name": "Atmosphere"
+      },
+      "roles": []
+    },
+    {
+      "name": "RestaurantReservation.Cuisine",
+      "inherits": {
+        "domain_name": "RestaurantReservation",
+        "model_name": "Cuisine"
+      },
+      "roles": []
+    },
+    {
+      "name": "RestaurantReservation.MealType",
+      "inherits": {
+        "domain_name": "RestaurantReservation",
+        "model_name": "MealType"
+      },
+      "roles": []
+    },
+    {
+      "name": "RestaurantReservation.PlaceName",
+      "inherits": {
+        "domain_name": "RestaurantReservation",
+        "model_name": "PlaceName"
+      },
+      "roles": []
+    },
+    {
+      "name": "RestaurantReservation.Rating",
+      "inherits": {
+        "domain_name": "RestaurantReservation",
+        "model_name": "Rating"
+      },
+      "roles": []
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "add to calender an event to reserve the flight tickets",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.AppName",
+          "startPos": 7,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "best breakfast by arden way please",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Rating",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "RestaurantReservation.MealType",
+          "startPos": 5,
+          "endPos": 13
+        },
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 18,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "best breakfast issaquah",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Rating",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "RestaurantReservation.MealType",
+          "startPos": 5,
+          "endPos": 13
+        },
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 15,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "book 2 tickets to see gone girl at 1 : 30pm today at amc 13 cinema",
+      "intent": "MovieTickets.Book",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 22,
+          "endPos": 30
+        },
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 53,
+          "endPos": 65
+        }
+      ]
+    },
+    {
+      "text": "book a ticket at cinepix",
+      "intent": "MovieTickets.Book",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 17,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "book amc theater pekin tickets",
+      "intent": "MovieTickets.Book",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 5,
+          "endPos": 7
+        },
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 9,
+          "endPos": 15
+        },
+        {
+          "entity": "MovieTickets.Address",
+          "startPos": 17,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "book at top san francisco dim sum restaurants for me",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Rating",
+          "startPos": 8,
+          "endPos": 10
+        },
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 12,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "book flight from london to paris on feb 14th",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "book flight to berlin on feb 14th",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "book for me amc tickets",
+      "intent": "MovieTickets.Book",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 12,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "book for me at schaumburg covenant church schaumburg illinois",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 15,
+          "endPos": 40
+        },
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 42,
+          "endPos": 60
+        }
+      ]
+    },
+    {
+      "text": "book me a flight from london to paris",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "book me a pasta restaurant for sun dec the 13th 12 : 00 pm",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 10,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "book me a ticket for jurassic world",
+      "intent": "MovieTickets.Book",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 21,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "book movie ticket near my location",
+      "intent": "MovieTickets.Book",
+      "entities": []
+    },
+    {
+      "text": "book reservations for a closest schezwan restaurant",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 32,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "book the best restaurant for me",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Rating",
+          "startPos": 9,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "book tickets for captain america",
+      "intent": "MovieTickets.Book",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 17,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "breakfast all day seattle",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 0,
+          "endPos": 16
+        },
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 18,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "breakfast delivery reservations",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.MealType",
+          "startPos": 0,
+          "endPos": 8
+        },
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 10,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "bye",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "call brady medical center",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 5,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "can we get reservations for ubud mediterranean cuisine",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 28,
+          "endPos": 31
+        },
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 33,
+          "endPos": 45
+        }
+      ]
+    },
+    {
+      "text": "can you book me a hotel in niagara falls for september fifth",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 27,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "can you find movie tickets",
+      "intent": "MovieTickets.Book",
+      "entities": []
+    },
+    {
+      "text": "can you help me book a restaurant ?",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": []
+    },
+    {
+      "text": "can you look up ironman ticket",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 16,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "cancel booking",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "canlis reservations please",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 0,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "chilis 4 top at 7 tonight please",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 0,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "cortana",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.AppName",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "dial sears optical and book follow up appointment for contacts .",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 5,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "does mashiko take reservations ?",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 5,
+          "endPos": 11
+        },
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 13,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "does mashiko take reservations right now ?",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 13,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "does olive gardens have high ratings ?",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Rating",
+          "startPos": 24,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "does pellican ' s take dinner reservations ?",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.MealType",
+          "startPos": 23,
+          "endPos": 28
+        },
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 30,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "eastside family friendly restaurants",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 0,
+          "endPos": 7
+        },
+        {
+          "entity": "RestaurantReservation.Atmosphere",
+          "startPos": 9,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "exit",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find for me a fun restaurant",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Atmosphere",
+          "startPos": 14,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "find for me pacific science center imax showing time",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 12,
+          "endPos": 38
+        }
+      ]
+    },
+    {
+      "text": "find gator ' s happy hour menu",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 15,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "find local barbecue delivery",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 11,
+          "endPos": 18
+        },
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 20,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "find me delivery that is open now",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 8,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "find sushi takeout near sharon ' s house",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 5,
+          "endPos": 9
+        },
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 11,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "flagship cinemas waterville maine showtimes",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 0,
+          "endPos": 15
+        },
+        {
+          "entity": "MovieTickets.Address",
+          "startPos": 17,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "flight to paris",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "flight to paris from london on feb 14th",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "flixster what is playing in theaters around me",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 28,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "fly from berlin to paris on may 5th",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "food places that deliver near me",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 17,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "free wi fi nevada",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 0,
+          "endPos": 9
+        },
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 11,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "get me tickets to see jurassic world",
+      "intent": "MovieTickets.Book",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 22,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "get me two tickets for jurassic park",
+      "intent": "MovieTickets.Book",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 23,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "get tickets for expendables three",
+      "intent": "MovieTickets.Book",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 16,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "go to paris",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "going from paris to berlin",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "hollywood tavern woodinville reservation",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 0,
+          "endPos": 15
+        },
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 17,
+          "endPos": 27
+        },
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 29,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "horseshoe indiana reservations",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 0,
+          "endPos": 8
+        },
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 10,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "i need a table for 2 at the cove at peninsula golf course",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 24,
+          "endPos": 56
+        }
+      ]
+    },
+    {
+      "text": "i need reservations for lunch at pearl through seatme",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.MealType",
+          "startPos": 24,
+          "endPos": 28
+        },
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 33,
+          "endPos": 37
+        },
+        {
+          "entity": "RestaurantReservation.AppName",
+          "startPos": 47,
+          "endPos": 52
+        }
+      ]
+    },
+    {
+      "text": "i need reservations for taco world for friday",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 24,
+          "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "i need to make reservations at a reasonable sashimi restaurant",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 44,
+          "endPos": 50
+        }
+      ]
+    },
+    {
+      "text": "i need you to reserve me a place tomorrow evening at the chinese restaurant",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 57,
+          "endPos": 63
+        }
+      ]
+    },
+    {
+      "text": "i want 3 tickets for life of pi",
+      "intent": "MovieTickets.Book",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 21,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "i want italian food for 4 on may 5th",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 7,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "i want to book a table for two for a nice romantic restaurant in south korea",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Atmosphere",
+          "startPos": 37,
+          "endPos": 49
+        },
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 65,
+          "endPos": 75
+        }
+      ]
+    },
+    {
+      "text": "i want to book at western hotels in amsterdam",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Atmosphere",
+          "startPos": 18,
+          "endPos": 24
+        },
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 36,
+          "endPos": 44
+        }
+      ]
+    },
+    {
+      "text": "i want to make a reservation for sushi tell me where i can do that",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 33,
+          "endPos": 37
+        }
+      ]
+    },
+    {
+      "text": "i want to make reservations at an italian restaurant tomorrow night",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 34,
+          "endPos": 40
+        }
+      ]
+    },
+    {
+      "text": "i want to reserve a place for son at awesome middle school",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Rating",
+          "startPos": 37,
+          "endPos": 43
+        }
+      ]
+    },
+    {
+      "text": "i want to reserve a vacation via tripadvisor app",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.AppName",
+          "startPos": 33,
+          "endPos": 43
+        }
+      ]
+    },
+    {
+      "text": "i want to reserve nightclub for latinas seattle",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 40,
+          "endPos": 46
+        }
+      ]
+    },
+    {
+      "text": "ignore",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "is argo playing in a theater near by",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 3,
+          "endPos": 6
+        },
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 21,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "is jungle book playing in battle creek ?",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 3,
+          "endPos": 13
+        },
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 26,
+          "endPos": 37
+        }
+      ]
+    },
+    {
+      "text": "let ' s make an order at bellevue thai delivery",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 25,
+          "endPos": 32
+        },
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 34,
+          "endPos": 37
+        },
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 39,
+          "endPos": 46
+        }
+      ]
+    },
+    {
+      "text": "make a reservation at bend oregon exotic restaurants",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 22,
+          "endPos": 32
+        },
+        {
+          "entity": "RestaurantReservation.Atmosphere",
+          "startPos": 34,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "make a reservation at matador",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 22,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "make an appointment at sun tan city",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 23,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "make dinner reservation at olive garden for 7 pm .",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.MealType",
+          "startPos": 5,
+          "endPos": 10
+        },
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 27,
+          "endPos": 38
+        }
+      ]
+    },
+    {
+      "text": "make reservations at chili ' s tomorrow night",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 5,
+          "endPos": 16
+        },
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 21,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "make reservations monday night for japanese food in seattle washington",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 35,
+          "endPos": 42
+        },
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 52,
+          "endPos": 69
+        }
+      ]
+    },
+    {
+      "text": "make sushi reservations for me and my husband",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 5,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "movie theaters near me playing creed",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 0,
+          "endPos": 13
+        },
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 31,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "order a delivery lunch from nearby restaurants",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 8,
+          "endPos": 15
+        },
+        {
+          "entity": "RestaurantReservation.MealType",
+          "startPos": 17,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "order a delivery lunch from restaurants near pennsylvania avenue",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 8,
+          "endPos": 15
+        },
+        {
+          "entity": "RestaurantReservation.MealType",
+          "startPos": 17,
+          "endPos": 21
+        },
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 45,
+          "endPos": 63
+        }
+      ]
+    },
+    {
+      "text": "place reservation for greek tonight please",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 22,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "purchase movie tickets",
+      "intent": "MovieTickets.Book",
+      "entities": []
+    },
+    {
+      "text": "reservations for firebirds",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 17,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "reserve a hotel with an atm nearby",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 24,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "reserve a restaurant in seattle for dinner on wednesday",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 24,
+          "endPos": 30
+        },
+        {
+          "entity": "RestaurantReservation.MealType",
+          "startPos": 36,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "reserve a room at al boccalino",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 18,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "reserve a room at hitlon paris by skype",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 18,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "reserve a room for my dog at animal hospital twenty four hours my area",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 45,
+          "endPos": 61
+        }
+      ]
+    },
+    {
+      "text": "reserve a seattle late night happy hour",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 10,
+          "endPos": 16
+        },
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 29,
+          "endPos": 38
+        }
+      ]
+    },
+    {
+      "text": "reserve for me a mexican buffet in my area",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 17,
+          "endPos": 23
+        },
+        {
+          "entity": "RestaurantReservation.Amenities",
+          "startPos": 25,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "reserve pietro ' s pizza salem for me",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 8,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "show me regal cinemas lima ohio showtimes",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 8,
+          "endPos": 20
+        },
+        {
+          "entity": "MovieTickets.Address",
+          "startPos": 22,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "show me regal cinemas simi valley showtimes",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 8,
+          "endPos": 20
+        },
+        {
+          "entity": "MovieTickets.Address",
+          "startPos": 22,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "show me the marquee cinemas new hartford ny showtimes",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 12,
+          "endPos": 26
+        },
+        {
+          "entity": "MovieTickets.Address",
+          "startPos": 28,
+          "endPos": 42
+        }
+      ]
+    },
+    {
+      "text": "show meregal cinemas simi valley showtimes",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.Address",
+          "startPos": 21,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "sometimes tomorrow in san francisco i ' d like to book a table for four at an italian restaurant",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 22,
+          "endPos": 34
+        },
+        {
+          "entity": "RestaurantReservation.Cuisine",
+          "startPos": 78,
+          "endPos": 84
+        }
+      ]
+    },
+    {
+      "text": "spaghetti warehouse reservations for 4 tuesday evening",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 0,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "supper at pizza ranch tonight so please call to make reservation",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.MealType",
+          "startPos": 0,
+          "endPos": 5
+        },
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 10,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "table for four in orlando florida please",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 18,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "table for three in edmonton please",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 19,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "the best drugstore matte foundation for oily skin please",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.Rating",
+          "startPos": 4,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "timbrekitchen reservation",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.PlaceName",
+          "startPos": 0,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "travel to paris",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "use seatme to make reservations for 2 on wednesday at 99 park in bellevue",
+      "intent": "RestaurantReservation.Reserve",
+      "entities": [
+        {
+          "entity": "RestaurantReservation.AppName",
+          "startPos": 4,
+          "endPos": 9
+        },
+        {
+          "entity": "RestaurantReservation.Address",
+          "startPos": 65,
+          "endPos": 72
+        }
+      ]
+    },
+    {
+      "text": "what ' s currently playing in the theaters",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 34,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "what ' s going on on the movie theater",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 25,
+          "endPos": 37
+        }
+      ]
+    },
+    {
+      "text": "what ' s in movie theaters",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 12,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "what ' s on at the cinema tonight ?",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 19,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "what ' s on in evesham",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 15,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "what ' s on in the cinema tonight",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 19,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "what ' s on in warwickshire",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 15,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "what ' s on odeon cinema",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 12,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "what ' s playing at angelica movie theater",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 20,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "what ' s playing at ipic theaters on saturday",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 20,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "what ' s playing at movie theaters in richmond virginia",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 20,
+          "endPos": 33
+        },
+        {
+          "entity": "MovieTickets.Address",
+          "startPos": 38,
+          "endPos": 54
+        }
+      ]
+    },
+    {
+      "text": "what ' s playing in theaters tonight",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 20,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "what ' s showing in theaters",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 20,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "what ' s the closest theater playing the martian",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 21,
+          "endPos": 27
+        },
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 37,
+          "endPos": 47
+        }
+      ]
+    },
+    {
+      "text": "what is playing at cineworld ashford tonight",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 19,
+          "endPos": 27
+        },
+        {
+          "entity": "MovieTickets.Address",
+          "startPos": 29,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "what is playing at my nearest cinema",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 30,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "what movies are playing nearby",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": []
+    },
+    {
+      "text": "what tickets are still available at cinemark",
+      "intent": "MovieTickets.Book",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 36,
+          "endPos": 43
+        }
+      ]
+    },
+    {
+      "text": "what time is ant - man playing tomorrow",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 13,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "what time is gravity playing at regal highlands",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 13,
+          "endPos": 19
+        },
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 32,
+          "endPos": 46
+        }
+      ]
+    },
+    {
+      "text": "what time is x men showing near me",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 13,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "when is a good day to die hard playing",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 8,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "when is frozen playing",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 8,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "when is lucy playing in the cinema in belgium",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 8,
+          "endPos": 11
+        },
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 28,
+          "endPos": 33
+        },
+        {
+          "entity": "MovieTickets.Address",
+          "startPos": 38,
+          "endPos": 44
+        }
+      ]
+    },
+    {
+      "text": "when is suicide squad playing near me",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 8,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "when is tomorrowland playing tomorrow",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 8,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "where are the marquee cinemas new hartford ny showtimes",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceName",
+          "startPos": 14,
+          "endPos": 28
+        },
+        {
+          "entity": "MovieTickets.Address",
+          "startPos": 30,
+          "endPos": 44
+        }
+      ]
+    },
+    {
+      "text": "where is turner the film showing",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.MovieTitle",
+          "startPos": 9,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "who ' s playing in theaters",
+      "intent": "MovieTickets.GetShowTime",
+      "entities": [
+        {
+          "entity": "MovieTickets.PlaceType",
+          "startPos": 19,
+          "endPos": 26
+        }
+      ]
+    }
+  ],
+  "settings": []
+}

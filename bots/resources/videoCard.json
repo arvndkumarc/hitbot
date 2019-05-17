@@ -1,0 +1,20 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.1",
+  "body": [
+    {
+    "type": "Media",
+    "poster": "https://adaptivecards.io/content/poster-video.png",
+    "sources": [{
+        "mimeType": "video/mp4",
+        "url": "https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp4"
+      }]
+  },
+  {
+    "type": "TextBlock",
+    "text": "This is video Card",
+    "wrap": true
+  }
+]
+}
